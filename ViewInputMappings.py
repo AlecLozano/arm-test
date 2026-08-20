@@ -8,7 +8,6 @@ def main():
     """Connects to any detected Controller and gives a live display of all it's inputs that are detected by Pygame.
     The ID's of the axis/buttons/D-pads will map to any getRawInput function in Controller Common"""
 
-    input("Make sure terminal is in full screen!\nIf you dont the text will be messed up (Press enter to continue)")
     print("bleh :p")
 
     connected = False
@@ -34,9 +33,7 @@ def main():
         for i in inputs:
             id = controller.getInputID(i)
             val = controller.getInputValue(i)
-
-            if float(val.strip("\n")) > 0:
-                print(f"{id}:{val}")
+            print(f"{id}:{val}")
 
 
         

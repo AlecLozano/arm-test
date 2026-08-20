@@ -31,7 +31,6 @@ panda = rtb.models.Panda()
 
 print(panda)
 
-
 # Make a new environment and add our robot
 env = Swift()
 env.launch(realtime=True, browser="windows-default")
