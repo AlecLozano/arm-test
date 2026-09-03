@@ -39,7 +39,7 @@ E5 = rtb.ET.Ry()# J3 spins about y-axis
 E6 = rtb.ET.tz(0.0920242)#J4-J5 (m)
 E7 = rtb.ET.Ry()#J4 spins about y-axis
 
-ArrrmBot = rtb.Robot(E1 * E2 * E3 * E4 * E5 * E6 * E7)
+ArrrmBot = rtb.Robot(E1 * E2 * E3 * E4 * E5 * E6 * E7) 
 
 print(ArrrmBot)
 
