@@ -47,6 +47,8 @@ ev = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
 move_wrist = False
 wrist_speed = 0.0
 
+
+#Wait for xbox controller connection
 connected = False
 while not connected:
     try:
@@ -70,7 +72,7 @@ val = None
 speedCap = .3
 wrist_speed_cap = .7
 
-# Run the simulation for 5 seconds
+
 while True:
 
     inputs = controller.getControllerInput()
@@ -80,14 +82,19 @@ while True:
 
     
         if id is not None and val is not None:
+            #Move along x-axis
             if id == '6':
                 ev[0] = val * speedCap
+            #Move along y-axis
             if id == '5':
                 ev[1] = val * speedCap
+            #Move along z-axis
             if id == '8':
                 ev[2] = val*-1 * speedCap
+            #Move Wrist forward
             if id == '9':
                 wrist_speed = (1 + val)/2 * wrist_speed_cap
+            #Move Wrist backward
             if id == '10':
                 wrist_speed = (1 + val)/2 * wrist_speed_cap * -1
         # if id == '18':
